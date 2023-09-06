@@ -77,7 +77,7 @@ h6,
 
 /*** Button ***/
 .btn {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
   transition: 0.5s;
 }
@@ -121,7 +121,7 @@ h6,
 
 /*** Navbar ***/
 .navbar-dark .navbar-nav .nav-link {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   position: relative;
   margin-left: 25px;
   padding: 35px 0;
@@ -186,7 +186,7 @@ h6,
 
   .navbar-dark .navbar-nav .nav-link::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 0;
     height: 2px;
     bottom: -1px;
@@ -246,7 +246,7 @@ h6,
 /*** Section Title ***/
 .section-title::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 150px;
   height: 5px;
   left: 0;
@@ -267,7 +267,7 @@ h6,
 
 .section-title::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 6px;
   height: 5px;
   bottom: 0px;
@@ -518,4 +518,25 @@ h6,
   .footer-about {
     margin-bottom: -75px;
   }
+}
+
+/* images */
+
+.images_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 15px;
+}
+.images_container img {
+  width: 100%;
+  display: block;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: all 100ms ease-out;
+}
+.images_container img:hover {
+  transform: scale(1.04);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
 }
