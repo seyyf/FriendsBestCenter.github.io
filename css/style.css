@@ -406,6 +406,10 @@ h6,
   box-shadow: 0 0 30px #dddddd;
 }
 
+.testimonial-item img {
+  object-fit: cover;
+}
+
 /*** Team ***/
 .team-item {
   transition: 0.5s;
@@ -434,11 +438,11 @@ h6,
   box-shadow: 0 0 30px #dddddd;
 }
 
-.team-item:hover .team-social {
+/*.team-item:hover .team-social {
   background: rgba(9, 30, 62, 0.7);
 }
 
-.team-item:hover .team-social a.btn:first-child {
+ .team-item:hover .team-social a.btn:first-child {
   opacity: 1;
   margin-top: 0;
   transition: 0.3s 0s;
@@ -460,7 +464,7 @@ h6,
   opacity: 1;
   margin-top: 0;
   transition: 0.3s 0.15s;
-}
+} */
 
 .team-item .team-img img,
 .blog-item .blog-img img {
@@ -534,6 +538,8 @@ h6,
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
   transition: all 100ms ease-out;
+  height: 400px;
+  object-fit: cover;
 }
 .images_container img:hover {
   transform: scale(1.04);

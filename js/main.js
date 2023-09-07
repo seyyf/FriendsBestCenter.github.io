@@ -157,21 +157,16 @@ function toggleActiveClassOnScroll() {
 
 window.addEventListener("scroll", toggleActiveClassOnScroll);
 
-$(document).ready(function () {
-  $("#gallery img").click(function () {
-    var t = $(this).attr("src");
-    $(".modal-body").html("<img src='" + t + "' class='modal-img'>");
-    $("#myModal").modal();
-  });
+const sendEmail = () => {
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "mejri.seyf@gmail.com",
+    Password: "8A62E6221B0FF81D310552B092A811A1A509",
+    To: "mejri.seyf@gmail.com",
+    From: document.getElementById("email").value,
+    Subject: "This is the subject",
+    Body: document.getElementById("content").value,
+  }).then((message) => alert(message));
+};
 
-  $("video").click(function () {
-    var v = $("video > source");
-    var t = v.attr("src");
-    $(".modal-body").html(
-      "<video class='model-vid' controls><source src='" +
-        t +
-        "' type='video/mp4'></source></video>"
-    );
-    $("#myModal").modal();
-  });
-});
+console.log(document.getElementById("content").value, "valuuue");
