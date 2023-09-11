@@ -524,6 +524,11 @@ h6,
   }
 }
 
+#myForm p,
+#myForm label {
+  color: white;
+}
+
 /* images */
 
 .images_container {

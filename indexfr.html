@@ -833,7 +833,7 @@
     >
       <div class="container py-5">
         <div class="row g-5">
-          <div class="col-lg-7">
+          <div class="col-lg-6">
             <div class="section-title position-relative pb-3 mb-5">
               <!-- <h5 class="fw-bold text-primary text-uppercase">
                 Request A Quote
@@ -886,12 +886,12 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <div
               class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn"
               data-wow-delay="0.9s"
             >
-              <form>
+              <form id="myForm">
                 <div class="row g-3">
                   <div class="col-xl-12">
                     <input
@@ -899,6 +899,7 @@
                       class="form-control bg-light border-0"
                       placeholder="Votre Nom"
                       style="height: 55px"
+                      name="user_name"
                     />
                   </div>
                   <div class="col-12">
@@ -907,6 +908,7 @@
                       class="form-control bg-light border-0"
                       placeholder="Votre E-Mail"
                       style="height: 55px"
+                      name="user_email"
                     />
                   </div>
                   <div class="col-12">
@@ -915,6 +917,7 @@
                       class="form-control bg-light border-0"
                       placeholder="Votre Age"
                       style="height: 55px"
+                      name="user_age"
                     />
                   </div>
                   <div class="col-12">
@@ -923,32 +926,76 @@
                       class="form-control bg-light border-0"
                       placeholder="Votre numéro de téléphone"
                       style="height: 55px"
+                      name="user_phone"
                     />
                   </div>
                   <div class="col-12">
                     <select
                       class="form-select bg-light border-0"
+                      name="training_choice"
                       style="height: 55px"
                     >
-                      <option selected>Select A Service</option>
-                      <option value="1">Service 1</option>
-                      <option value="2">Service 2</option>
-                      <option value="3">Service 3</option>
+                      <option selected>Choisir une formation</option>
+                      <option value="Développement web">
+                        Développement web
+                      </option>
+                      <option value="Marketing digital">
+                        Marketing digital
+                      </option>
+                      <option value="Design graphique">Design graphique</option>
+                      <option value="UX/UI Design">UX/UI Design</option>
+                      <option value="Santé, assistance et soins infirmiers">
+                        Santé, assistance et soins infirmiers
+                      </option>
+                      <option value="Secrétariat médical">
+                        Secrétariat médical
+                      </option>
+                      <option value="Secourisme">Secourisme</option>
+                      <option value="Éducatrice enfance">
+                        Éducatrice enfance
+                      </option>
+                      <option value="Soins des personnes âgée">
+                        Soins des personnes âgée
+                      </option>
+                      <option
+                        value="Assistance à la personne en établissement et à domicile"
+                      >
+                        Assistance à la personne en établissement et à domicile
+                      </option>
                     </select>
+                  </div>
+                  <div class="d-flex align-items-center gap-1 col-12">
+                    <p class="mb-0 me-3">
+                      Veuillez indiquer votre disponibilité :
+                    </p>
+                    <input
+                      type="radio"
+                      id="html"
+                      name="user_availability"
+                      value="Toute la semaine"
+                      checked
+                    />
+                      <label for="Toute la semaine">Toute la semaine</label><br />
+                     
+                    <input
+                      type="radio"
+                      id="css"
+                      name="user_availability"
+                      value="Pendant le week-end"
+                    />
+                      <label for="Pendant le week-end">Pendant le week-end</label><br />
                   </div>
                   <div class="col-12">
                     <textarea
                       class="form-control bg-light border-0"
                       rows="3"
                       placeholder="Votre Message"
+                      name="user_message"
                     ></textarea>
-                    <button class="btn form_button">Envoyer</button>
-                  </div>
-                  <!-- <div class="col-12">
-                    <button class="btn btn-dark w-100 py-3" type="submit">
-                      Request A Quote
+                    <button type="submit" class="btn form_button">
+                      Envoyer
                     </button>
-                  </div> -->
+                  </div>
                 </div>
               </form>
             </div>

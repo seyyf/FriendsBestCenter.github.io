@@ -157,16 +157,25 @@ function toggleActiveClassOnScroll() {
 
 window.addEventListener("scroll", toggleActiveClassOnScroll);
 
-const sendEmail = () => {
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "mejri.seyf@gmail.com",
-    Password: "8A62E6221B0FF81D310552B092A811A1A509",
-    To: "mejri.seyf@gmail.com",
-    From: document.getElementById("email").value,
-    Subject: "This is the subject",
-    Body: document.getElementById("content").value,
-  }).then((message) => alert(message));
-};
+$("#myForm").on("submit", function (event) {
+  event.preventDefault(); // prevent reload
 
-console.log(document.getElementById("content").value, "valuuue");
+  var formData = new FormData(this);
+  formData.append("service_id", "service_9l6783p");
+  formData.append("template_id", "template_s1gjo6r");
+  formData.append("user_id", "8bZboEOuueSeP8zbE");
+
+  $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
+    type: "POST",
+    data: formData,
+    contentType: false, // auto-detection
+    processData: false, // no need to parse formData to string
+  })
+    .done(function () {
+      alert("Votre email a était envoyer!");
+      $("#myForm")[0].reset();
+    })
+    .fail(function (error) {
+      alert("Oops... " + JSON.stringify(error));
+    });
+});
