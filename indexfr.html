@@ -74,7 +74,7 @@
 
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
-      <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+      <nav class="navbar navbar-expand-lg navbar-dark px-5 py-lg-0">
         <a href="index.html" class="navbar-brand p-0">
           <!-- <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1> -->
           <img src="img/Logo.jpg" alt="" style="width: 80px" />
@@ -964,7 +964,9 @@
                       </option>
                     </select>
                   </div>
-                  <div class="d-flex align-items-center gap-1 col-12">
+                  <div
+                    class="d-flex align-items-center gap-1 col-12 availability_container"
+                  >
                     <p class="mb-0 me-3">
                       Veuillez indiquer votre disponibilité :
                     </p>
@@ -975,16 +977,13 @@
                       value="Toute la semaine"
                       checked
                     />
-                      <label for="Toute la semaine">Toute la semaine</label
-                    ><br />
-                     
+                    <label for="Toute la semaine">Toute la semaine</label><br />
                     <input
                       type="radio"
                       id="css"
                       name="user_availability"
                       value="Pendant le week-end"
                     />
-                     
                     <label for="Pendant le week-end">Pendant le week-end</label
                     ><br />
                   </div>

@@ -153,8 +153,9 @@ h6,
 
 @media (max-width: 991.98px) {
   .sticky-top.navbar-dark {
-    position: relative;
+    position: fixed;
     background: #ffffff;
+    width: 100%;
   }
 
   .navbar-dark .navbar-nav .nav-link,
@@ -527,6 +528,12 @@ h6,
 #myForm p,
 #myForm label {
   color: white;
+}
+
+@media (max-width: 500px) {
+  .availability_container {
+    display: block !important;
+  }
 }
 
 /* images */
