@@ -158,7 +158,7 @@ function toggleActiveClassOnScroll() {
 window.addEventListener("scroll", toggleActiveClassOnScroll);
 
 $("#myForm").on("submit", function (event) {
-  event.preventDefault(); // prevent reload
+  event.preventDefault();
 
   var formData = new FormData(this);
   formData.append("service_id", "service_9l6783p");
