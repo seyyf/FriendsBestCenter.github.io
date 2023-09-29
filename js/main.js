@@ -125,7 +125,6 @@ function toggleActiveClass(event) {
     link.classList.remove("active");
   });
 
-  // Add active class to the clicked link
   event.target.classList.add("active");
 }
 
